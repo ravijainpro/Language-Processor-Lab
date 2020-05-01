@@ -1,0 +1,48 @@
+[ partial answers ]
+
+
+      |        =
+1. S ---> s1 --------> s2
+    \        \   |
+     \        \------> s4
+      \  =
+       ----- s3
+
+       S is the initial state.
+       s1, s2, s3, s4 -- all are final states. 
+       There is an edge from s1 -> S (on space),
+       from s2, s3, and s4 to S (on space or | or =).
+       
+
+2. Not SLR(1) and hence not LR(0) either.
+Here is a state on which there is shift-reduce conflict:
+
+S -> SS.
+S -> S.S
+S -> .SS
+S -> .LB S RB
+S -> .id
+
+3. Declaration of the form: 
+	T1 x; // remember that the variable x in current scope has type T1.
+   Assignment:
+	a = b + c // lookup type of b and c. Must match. 
+		  // type of a must match of that b and c.
+   Function declaration
+	t1 foo (t2 x) ..
+		// remember that x in foo has type t2.
+		// remember that type of foo is t2->t1.
+   Function call
+   	a = foo(b)
+		// lookup type of foo, say t2->t1
+		// lookup the type of b. Must match t2
+		// lookup the type of a. Must match t1
+   Return statement:
+   	return x;
+		// lookup the type of the "current" function, say t2->t1.
+		// lookup the type of x. Must match t1
+  
+4. 
+params:=  params, id
+	| params, type_name id
+	| type_name id
