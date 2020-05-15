@@ -1,4 +1,4 @@
-**Sethi Ullman Algorithm Implementation in c++**
+***Sethi Ullman Algorithm Implementation in c++***
 Method:
 1. Input taken
 2. Convert the input to binary expression tree (AST)
