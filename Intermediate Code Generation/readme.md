@@ -1,4 +1,4 @@
-**A program of generating Intermediate code for the below code snippet.**
+**A program of generating Optimized Intermediate code for the below code snippet.**
 </br></br>
 Insert(int m[], int i, int data) {</br>
 &nbsp;&nbsp;&nbsp;&nbsp;int i;</br>
